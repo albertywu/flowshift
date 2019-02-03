@@ -3,6 +3,23 @@ Flowshifter is a toolkit for for transforming [flow](https://flow.org/) to [type
 
 It utilizes a plugin-based architecture, so you can choose exactly what modifications you want. Each plugin will perform a transformation for a specific feature. The best way to understand what a [plugin](https://github.com/albertywu/flowshifter/blob/master/plugins/exact-types/exact-types.js) does is to check out its associated [test file](https://github.com/albertywu/flowshifter/blob/master/plugins/exact-types/__tests__/exact-types-test.js).
 
+# Todo
+- [x] exact types removal
+- [x] covariance notation `+ -> readonly`
+- [x] generics basics (bounded polymorphism)
+- [ ] generics corner-cases
+- [ ] maybe & nullable types
+- [ ] type casting
+- [ ] imports squashing
+- [ ] typeof imports
+- [ ] $Enum<X> -> keyof X
+- [ ] $Record
+- [ ] type-narrowing functions (%checks)
+- [ ] flag unfix-able with a comment
+- [ ] release
+  - [ ] a nice way to run all plugins for a set of flow files
+  - [ ] docs
+
 # Run a Plugin
 ```sh
 # 1) install jscodeshift
