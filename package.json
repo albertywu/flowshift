@@ -6,7 +6,7 @@
   "scripts": {
     "build": "exit 0",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "author": "albertywu@gmail.com",
   "license": "MIT",
