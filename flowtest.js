@@ -2,41 +2,31 @@
 import { type Yo } from './foo'
 import { Yooo } from './foo'
 
-type Foo = {
-  readonly foo: string,
-  readonly bar: "hello",
-  baz: { readonly name: "bob", age: 42 },
-};
+// type Foo = { readonly bar: string, baz: number, readonly boo: string }
+
+// type Foo = {
+//   readonly foo: string,
+//   readonly bar: "hello",
+//   baz: { readonly name: "bob", age: 42 },
+// };
 
 interface A {
-  readonly b: B,
+  b: B,
   -c: C
 }
 
-function foo<A extends string>(x: A): A {
+function foo<A: string>(x: A): A {
   return x
 }
 
-function foo<A extends Foo>(x: A): A {
+function foo<A: Foo>(x: A): A {
   return x2
 }
 
-function foo<A extends Foo | Bar>(x: A): A {
+function foo<A: Foo | Bar > (x: A): A {
   return x
 }
 
-// function foo<A extends  string>(x: A): A {
-//   return x
-// }
 
-// function foo<A extends  Foo>(x: A): A {
-//   return x
-// }
 
-// function foo<A extends  Foo | Bar>(x: A): A {
-//   return x
-// }
-
-/*
-  CompiledTs: type Bar = { readonly foo: string, baz: number }
-*/
+const x = 42
