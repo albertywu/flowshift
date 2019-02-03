@@ -21,7 +21,7 @@ A plugin is simply a transform function as defined below. If the function return
 
 Plugin functions are after calling the cli command `jscodeshift`.
 
-```flow
+```js
 function transform(fileInfo: FileInfo, api: Api, options: Options): string | undefined {
   // transform code goes here
 }
