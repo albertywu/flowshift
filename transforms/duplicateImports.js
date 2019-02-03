@@ -1,33 +1,33 @@
 function transform(fileInfo, api, options) {
-  const j = api.jscodeshift
-  const ast = j(fileInfo.source) // returns fluent collection interface
-  const fileToImportCount = {}
-  const fileToSpecifiers = {}
+  const j = api.jscodeshift;
+  const ast = j(fileInfo.source); // returns fluent collection interface
+  const fileToImportCount = {};
+  const fileToSpecifiers = {};
 
-  ast.find(j.ImportDeclaration).forEach((p: any) => {
-    const file = p.value.source.value
+  ast.find(j.ImportDeclaration).forEach(p => {
+    const file = p.value.source.value;
     if (!(file in fileToSpecifiers)) {
-      fileToSpecifiers[file] = []
+      fileToSpecifiers[file] = [];
     }
-    fileToSpecifiers[file] = [...fileToSpecifiers[file], ...p.value.specifiers]
+    fileToSpecifiers[file] = [...fileToSpecifiers[file], ...p.value.specifiers];
 
     if (!(file in fileToImportCount)) {
-      fileToImportCount[file] = 0
+      fileToImportCount[file] = 0;
     } else {
-      p.prune()
+      p.prune();
     }
-    fileToImportCount[file] += 1
-  })
+    fileToImportCount[file] += 1;
+  });
 
   Object.keys(fileToImportCount).map(file => {
     if (fileToImportCount[file] > 1) {
-      ast.find(j.ImportDeclaration, { source: { value: file } }).forEach((p: any) => {
-        p.value.specifiers = fileToSpecifiers[file]
-      })
+      ast.find(j.ImportDeclaration, {source: {value: file}}).forEach(p => {
+        p.value.specifiers = fileToSpecifiers[file];
+      });
     }
-  })
+  });
 
-  return ast.toSource()
+  return ast.toSource();
 }
 
-module.exports = transform
+module.exports = transform;

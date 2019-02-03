@@ -6,7 +6,7 @@
   "scripts": {
     "build": "exit 0",
     "lint": "eslint .",
-    "test": "node test/index.js"
+    "test": "jest"
   },
   "author": "albertywu@gmail.com",
   "license": "MIT",
