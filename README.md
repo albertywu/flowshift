@@ -19,7 +19,7 @@ Plugins use [jscodeshift](https://github.com/facebook/jscodeshift) to transform 
 
 A plugin is simply a transform function as defined below. If the function returns a string, then the file is written with the value of the returned string. If the return value is undefined, nothing happens to the original file.
 
-Plugin functions are after calling the cli command `jscodeshift`.
+Plugin functions are invoked by the cli command `jscodeshift`.
 
 ```js
 function transform(fileInfo: FileInfo, api: Api, options: Options): string | undefined {
@@ -37,7 +37,7 @@ type Api = {
 }
 
 type Options = {
-  [key: string]: string // custom options passed via the CLI command `jscodeshift`
+  [key: string]: string // passed in via CLI command `jscodeshift`
 }
 ```
 
@@ -46,7 +46,10 @@ type Options = {
 yarn test
 ```
 
-## Install
+# Install
 ```
 yarn
 ```
+
+# Contribute
+❤
