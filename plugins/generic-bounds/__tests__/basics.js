@@ -84,14 +84,6 @@ describe('generic bounds in class definitions', () => {
   );
 });
 
-// TODO: investigate object-literal upper-bound type
-// https://flow.org/en/docs/types/generics/#toc-adding-types-to-generics
-/*
-  // @flow
-  function logFoo<T: { foo: string }>(obj: T): T {
-    // ...
-  }
-*/
 
 // TODO: investigate inference of generic arguments
 // https://flow.org/en/docs/types/generics/#toc-supplying-type-arguments-to-callables
