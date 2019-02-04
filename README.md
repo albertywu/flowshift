@@ -1,7 +1,7 @@
 # Flowshift
 Flowshift is a toolkit for for transforming [flow](https://flow.org/) to [typescript](http://www.typescriptlang.org/).
 
-It utilizes a plugin-based architecture, so you can choose exactly what modifications you want. Each plugin will perform a transformation for a specific feature. The best way to understand what a [plugin](https://github.com/albertywu/flowshift/blob/master/plugins/exact-types/exact-types.js) does is to check out its associated [test file](https://github.com/albertywu/flowshift/blob/master/plugins/exact-types/__tests__/exact-types-test.js).
+It utilizes a plugin-based architecture, so you can choose exactly what modifications you want. Each plugin will perform a transformation for a specific feature. The best way to understand what a [plugin](https://github.com/albertywu/flowshift/blob/master/plugins/generic-bounds/generic-bounds.js) does is to check out its associated [test file](https://github.com/albertywu/flowshift/blob/master/plugins/generic-bounds/__tests__/basics.js).
 
 # Todo
 - [x] exact types removal
