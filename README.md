@@ -10,8 +10,8 @@ Each plugin is a jscodeshift-style [transform](https://github.com/facebook/jscod
   - [x] basics
   - [x] bounded polymorphism
 - [x] maybe types
+- [x] imports remove type
 - [ ] type casting
-- [ ] imports squashing
 - [ ] typeof imports
 - [ ] $Enum<X> -> keyof X
 - [ ] $Record
