@@ -9,7 +9,7 @@ It utilizes a plugin-based architecture, which means codemods can easily be test
 - [x] generics 
   - [x] basics
   - [x] bounded polymorphism
-- [ ] maybe & nullable types
+- [x] maybe types
 - [ ] type casting
 - [ ] imports squashing
 - [ ] typeof imports
